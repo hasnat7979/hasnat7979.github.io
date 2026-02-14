@@ -1,47 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasnat | Android Developer</title>
-    <style>
-        :root { --primary: #3DDC84; --dark: #073042; --light: #eff1f3; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--light); color: var(--dark); line-height: 1.6; }
-        header { background: var(--dark); color: white; padding: 4rem 1rem; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 2rem; }
-        .app-card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
-        .btn { display: inline-block; padding: 0.8rem 1.5rem; margin: 0.5rem; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .btn-palm { background: var(--primary); color: var(--dark); }
-        .btn-apkpure { background: #34495e; color: white; }
-        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
-        .footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #7f8c8d; }
-    </style>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hasnat | Android Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.icons.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3DDC84", /* Android Green */
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                },
+            },
+        }
+    </script>
 </head>
-<body>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
 
-<header>
-    <h1>Hasnat Developer</h1>
-    <p>Professional Android Developer specializing in Java & Media Tools</p>
+<header class="fixed top-0 w-full z-50 border-b border-slate-200/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+    <nav class="container mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                <span class="material-icons-round text-background-dark">android</span>
+            </div>
+            <span class="font-bold text-xl tracking-tight">Hasnat<span class="text-primary">Dev</span></span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a class="hover:text-primary transition-colors" href="#work">My Apps</a>
+            <a class="hover:text-primary transition-colors" href="/privacy.html">Privacy Policy</a>
+            <a class="bg-primary/10 text-primary border border-primary/20 px-5 py-2.5 rounded-lg hover:bg-primary hover:text-dark transition-all" href="/app-ads.txt">app-ads.txt</a>
+        </div>
+    </nav>
 </header>
 
-<div class="container">
-    <div class="app-card">
-        <h2>Media Compressor</h2>
-        <p>A powerful, lightweight tool to compress images and PDFs without losing quality. Localized in 12+ languages for global users.</p>
-        
-        <a href="#" class="btn btn-palm">Get it on PalmStore</a>
-        <a href="#" class="btn btn-apkpure">Download APKPure</a>
-    </div>
+<main class="pt-20">
+    <section class="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider">
+                    <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                    Available for New Projects
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight">
+                    Building Powerful <br/>
+                    <span class="text-primary">Android</span> Utilities
+                </h1>
+                <p class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
+                    I am a dedicated Android Developer specializing in <b>Java</b> and high-efficiency mobile tools. I build lightweight, professional applications designed for global performance.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#work" class="bg-primary hover:bg-primary/90 text-background-dark px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
+                        View My Work <span class="material-icons-round">arrow_downward</span>
+                    </a>
+                </div>
+                <div class="pt-8 border-t border-slate-200 dark:border-slate-800">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">Core Technology Stack</p>
+                    <div class="flex flex-wrap gap-6 items-center">
+                        <span class="font-medium text-slate-400 hover:text-primary cursor-default">Java</span>
+                        <span class="font-medium text-slate-400 hover:text-primary cursor-default">Android SDK</span>
+                        <span class="font-medium text-slate-400 hover:text-primary cursor-default">XML Layouts</span>
+                        <span class="font-medium text-slate-400 hover:text-primary cursor-default">Gradle</span>
+                    </div>
+                </div>
+            </div>
 
-    <div style="margin-top: 3rem; text-align: center;">
-        <h3>Technical Skills</h3>
-        <p>Java • Android SDK • Gradle • XML • AdMob Integration</p>
-    </div>
-</div>
+            <div class="relative lg:justify-self-end hidden lg:block">
+                <div class="relative w-72 h-72 lg:w-96 lg:h-96">
+                    <div class="absolute -inset-4 bg-primary/20 rounded-3xl blur-2xl opacity-50"></div>
+                    <div class="relative w-full h-full rounded-3xl overflow-hidden border-2 border-slate-200/10 bg-slate-800 shadow-2xl flex items-center justify-center">
+                        <span class="material-icons-round text-[12rem] text-primary/20">terminal</span>
+                    </div>
+                    <div class="absolute -top-6 -right-6 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700">
+                        <p class="text-[10px] text-slate-500 font-bold uppercase">Localization</p>
+                        <p class="font-bold">12+ Languages</p>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700">
+                        <p class="text-[10px] text-slate-500 font-bold uppercase">Release</p>
+                        <p class="font-bold">PalmStore & APKPure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="footer">
-    <p>&copy; 2026 Hasnat Developer | <a href="mailto:muhammadhasnat7682@gmail.com" style="color: inherit;">muhammadhasnat7682@gmail.com</a></p>
-</div>
+    <section id="work" class="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12">Featured Application</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="bg-white dark:bg-background-dark p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-primary text-4xl">compress</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Media Compressor</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                        A professional-grade utility designed to reduce the size of images and PDF files without compromising visual integrity. Built with a focus on speed, local processing for privacy, and multi-language support.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="px-6 py-3 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-700 transition-all">PalmStore</a>
+                        <a href="#" class="px-6 py-3 border border-slate-300 dark:border-slate-700 rounded-xl font-bold hover:border-primary transition-all">APKPure</a>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="text-xl font-bold">Key Features</h4>
+                    <ul class="space-y-4 text-slate-600 dark:text-slate-400">
+                        <li class="flex items-start gap-3"><span class="material-icons-round text-primary">check</span> High-efficiency image & PDF resizing</li>
+                        <li class="flex items-start gap-3"><span class="material-icons-round text-primary">check</span> Local storage handling for user data privacy</li>
+                        <li class="flex items-start gap-3"><span class="material-icons-round text-primary">check</span> Localized in 12+ languages (Arabic, Hindi, etc.)</li>
+                        <li class="flex items-start gap-3"><span class="material-icons-round text-primary">check</span> Integrated with AdMob for non-intrusive monetization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <p class="text-slate-500 text-sm">© 2026 HasnatDev. Built for Android Excellence.</p>
+        <div class="flex gap-6 text-sm font-medium">
+            <a href="mailto:hasnatdeveloperpro@gmail.com" class="hover:text-primary">Contact Me</a>
+            <a href="/privacy.html" class="hover:text-primary">Privacy</a>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
